@@ -1,4 +1,4 @@
-name: CI Pipeline (Azure DevOps-like)
+name: CI Pipeline
 
 on:
   push:
@@ -10,51 +10,33 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Usa el mismo OS que en Azure DevOps
+    runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Checkout del código (equivalente a "Get Sources" en Azure)
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Actualiza checkout también
 
-      # Paso 2: Instalar Node.js 22.x (como en Azure)
-      - name: Setup Node.js 22.x
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4  # Versión más reciente
         with:
           node-version: 22
-          cache: "npm"  # Cache para acelerar instalaciones futuras
+          cache: "npm"
 
-      # Paso 3: Instalar dependencias (equivalente a "npm install" en Azure)
       - name: Install dependencies
-        run: npm ci  # Usa "npm ci" para consistencia (mejor que "npm install")
+        run: npm ci
 
-      # Paso 4: Reemplazar tokens (equivalente a "Replace Token" en Azure)
-      - name: Replace environment tokens
-        run: |
-          sed -i "s/{{API_KEY}}/${{ secrets.API_KEY }}/g" src/config.js
-          sed -i "s/{{BASE_URL}}/${{ secrets.BASE_URL }}/g" src/config.js
-        # Ajusta los comandos según cómo manejes los tokens en tu proyecto
-
-      # Paso 5: Ejecutar tests personalizados (equivalente a "npm custom test")
       - name: Run custom tests
-        run: npm run test:ci  # Ejemplo: "test:ci" podría ser "jest --coverage --reporters=jest-junit"
+        run: npm run test:ci
         env:
-          CI: true  # Variable para entornos de CI
+          CI: true
 
-      # Paso 6: Publicar resultados de tests (equivalente a "Publish Test Results")
-      - name: Publish JUnit test results
-        uses: actions/upload-artifact@v3
-        if: always()  # Sube resultados incluso si fallan los tests
+      - name: Publish Test Results
+        uses: actions/upload-artifact@v4  # Versión correcta
         with:
           name: test-results
-          path: ./test-results/**/*.xml  # Ruta donde se guarda el JUnit XML
+          path: ./test-results/**/*.xml
 
-      # Paso 7: Publicar cobertura (equivalente a "Publish code coverage results")
-      - name: Publish coverage report
-        uses: codecov/codecov-action@v3
+      - name: Publish Coverage
+        uses: codecov/codecov-action@v4  # Actualiza codecov si es necesario
         with:
-          file: ./coverage/lcov.info  # Ruta del reporte de cobertura
-          flags: unittests  # Etiqueta opcional
-
-      
-
+          file: coverage/lcov.info
