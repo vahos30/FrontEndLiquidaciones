@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI Pipeline (Azure DevOps-like)
 
 on:
   push:
@@ -13,30 +13,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout del código
       - name: Checkout repository
-        uses: actions/checkout@v4  # Actualiza checkout también
+        uses: actions/checkout@v4
 
+      # 2. Configurar Node.js 22.x
       - name: Set up Node.js
-        uses: actions/setup-node@v4  # Versión más reciente
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "npm"
 
+      # 3. Instalar dependencias
       - name: Install dependencies
         run: npm ci
 
+      # 5. Ejecutar tests
       - name: Run custom tests
-        run: npm run test:ci
+        run: npm run test:ci  # Asegúrate que este script existe en tu package.json
         env:
           CI: true
 
+      # 6. Publicar resultados de tests JUnit
       - name: Publish Test Results
-        uses: actions/upload-artifact@v4  # Versión correcta
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: ./test-results/**/*.xml
+          path: ./test-results/**/*.xml  # Ajusta la ruta según tu configuración
 
-      - name: Publish Coverage
-        uses: codecov/codecov-action@v4  # Actualiza codecov si es necesario
+      # 7. Publicar cobertura
+      - name: Publish coverage report
+        uses: codecov/codecov-action@v4
         with:
-          file: coverage/lcov.info
+          file: ./coverage/lcov.info
+
+      
