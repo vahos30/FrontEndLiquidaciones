@@ -1,0 +1,59 @@
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { LiquidationFactorXState } from "../../../../../core/components/molecules/FactorX/LiquidationFactorXState";
+
+jest.mock("@components/atoms/svgIcons", () => ({
+    SvgCheck: jest.fn(() => <div data-testid="svg-check" />),
+    SvgError: jest.fn(({ message, index }) => (
+        <div data-testid="svg-error">
+            {message} - {index}
+        </div>
+    )),
+}));
+
+jest.mock("@components/atoms", () => ({
+    Tag: jest.fn(({ text }) => <div data-testid="tag">{text}</div>),
+}));
+
+describe("LiquidationFactorXState", () => {
+    it("renders SvgCheck when liquidation state is 'Liquidado'", () => {
+        render(<LiquidationFactorXState liquidation={{ state: "Liquidado" }} />);
+        expect(screen.getByTestId("svg-check")).toBeInTheDocument();
+    });
+
+    it("renders SvgError when liquidation has a non-null MensajeError", () => {
+        render(
+            <LiquidationFactorXState
+                liquidation={{ MensajeError: "Error message", idliquidation: 123 }}
+            />
+        );
+        const svgError = screen.getByTestId("svg-error");
+        expect(svgError).toBeInTheDocument();
+        expect(svgError).toHaveTextContent("Error message - 123");
+    });
+
+    it("renders Tag when liquidation state is 'Pendiente Envío SAP'", () => {
+        render(
+            <LiquidationFactorXState liquidation={{ state: "Pendiente Envío SAP" }} />
+        );
+        const tag = screen.getByTestId("tag");
+        expect(tag).toBeInTheDocument();
+        expect(tag).toHaveTextContent("Pendiente Envío SAP");
+    });
+
+    it("renders Tag when liquidation state is 'Enviado a SAP'", () => {
+        render(
+            <LiquidationFactorXState liquidation={{ state: "Enviado a SAP" }} />
+        );
+        const tag = screen.getByTestId("tag");
+        expect(tag).toBeInTheDocument();
+        expect(tag).toHaveTextContent("Enviado a SAP");
+    });
+
+    it("does not render SvgCheck, SvgError, or Tag when liquidation is undefined", () => {
+        render(<LiquidationFactorXState liquidation={undefined} />);
+        expect(screen.queryByTestId("svg-check")).not.toBeInTheDocument();
+        expect(screen.queryByTestId("error-icon")).not.toBeInTheDocument();
+        expect(screen.queryByTestId("tag")).not.toBeInTheDocument();
+    });
+});

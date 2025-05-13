@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/assetsLiquidaciones/*"     
+    ]
+  },
+  "mimeTypes": {
+    ".css": "text/css",
+    ".js": "application/javascript",
+    ".json": "application/json"
+  },
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization"
+  }
+}

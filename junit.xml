@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="208" failures="0" errors="0" time="37.511">
+  <testsuite name="useLiquidationPBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="9.297" tests="5">
+    <testcase classname="useLiquidationPBA calls getMainCalculations on mount" name="useLiquidationPBA calls getMainCalculations on mount" time="0.115">
+    </testcase>
+    <testcase classname="useLiquidationPBA makeCalculations actualiza success y vuelve a llamar datos" name="useLiquidationPBA makeCalculations actualiza success y vuelve a llamar datos" time="0.029">
+    </testcase>
+    <testcase classname="useLiquidationPBA makeLiquidation actualiza success" name="useLiquidationPBA makeLiquidation actualiza success" time="0.023">
+    </testcase>
+    <testcase classname="useLiquidationPBA exportPBA llama a ExcelClass.ExportExcel" name="useLiquidationPBA exportPBA llama a ExcelClass.ExportExcel" time="0.028">
+    </testcase>
+    <testcase classname="useLiquidationPBA exportPBA maneja error sin datos" name="useLiquidationPBA exportPBA maneja error sin datos" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationPBAFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="9.496" tests="4">
+    <testcase classname="useLiquidationPBAFilters inicializa correctamente con valores por defecto y carga consecutivos" name="useLiquidationPBAFilters inicializa correctamente con valores por defecto y carga consecutivos" time="0.13">
+    </testcase>
+    <testcase classname="useLiquidationPBAFilters handleMonthYearChange actualiza valores y limpia consecutivos" name="useLiquidationPBAFilters handleMonthYearChange actualiza valores y limpia consecutivos" time="0.14">
+    </testcase>
+    <testcase classname="useLiquidationPBAFilters handleChange actualiza consecutivos y llama onChangeSelects + apiPBA" name="useLiquidationPBAFilters handleChange actualiza consecutivos y llama onChangeSelects + apiPBA" time="0.018">
+    </testcase>
+    <testcase classname="useLiquidationPBAFilters resetFilters vuelve a valores iniciales" name="useLiquidationPBAFilters resetFilters vuelve a valores iniciales" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="9.63" tests="5">
+    <testcase classname="useLiquidationFilters inicializa correctamente con valores por defecto y carga clientes" name="useLiquidationFilters inicializa correctamente con valores por defecto y carga clientes" time="0.187">
+    </testcase>
+    <testcase classname="useLiquidationFilters handleMonthYearChange actualiza mes/año y limpia filtros" name="useLiquidationFilters handleMonthYearChange actualiza mes/año y limpia filtros" time="0.131">
+    </testcase>
+    <testcase classname="useLiquidationFilters handleChange para clients actualiza seleccion y llama a onChangeSelects" name="useLiquidationFilters handleChange para clients actualiza seleccion y llama a onChangeSelects" time="0.044">
+    </testcase>
+    <testcase classname="useLiquidationFilters handleChange para supplys y states actualiza correctamente" name="useLiquidationFilters handleChange para supplys y states actualiza correctamente" time="0.04">
+    </testcase>
+    <testcase classname="useLiquidationFilters resetFilters vuelve a los valores por defecto" name="useLiquidationFilters resetFilters vuelve a los valores por defecto" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Liquidation (prueba sencilla)" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="10.152" tests="1">
+    <testcase classname="Liquidation (prueba sencilla) debe llamar a getLiquidation al hacer click en Buscar" name="Liquidation (prueba sencilla) debe llamar a getLiquidation al hacer click en Buscar" time="0.351">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationOBAActionButtons" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="10.124" tests="4">
+    <testcase classname="LiquidationOBAActionButtons calls onExport when the export button is clicked" name="LiquidationOBAActionButtons calls onExport when the export button is clicked" time="0.538">
+    </testcase>
+    <testcase classname="LiquidationOBAActionButtons calls onAction when the action button is clicked" name="LiquidationOBAActionButtons calls onAction when the action button is clicked" time="0.096">
+    </testcase>
+    <testcase classname="LiquidationOBAActionButtons disables the export button when disabledExport is true" name="LiquidationOBAActionButtons disables the export button when disabledExport is true" time="0.141">
+    </testcase>
+    <testcase classname="LiquidationOBAActionButtons disables the action button when disabledLiquidate is true" name="LiquidationOBAActionButtons disables the action button when disabledLiquidate is true" time="0.085">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidation" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:44" time="0.985" tests="5">
+    <testcase classname="useLiquidation getLiquidation carga liquidaciones y evalúa puedeLiquidar" name="useLiquidation getLiquidation carga liquidaciones y evalúa puedeLiquidar" time="0.024">
+    </testcase>
+    <testcase classname="useLiquidation updateLiquidation actualiza success si todo sale bien" name="useLiquidation updateLiquidation actualiza success si todo sale bien" time="0.022">
+    </testcase>
+    <testcase classname="useLiquidation sendToPrepareSap actualiza estado de las liquidaciones y success" name="useLiquidation sendToPrepareSap actualiza estado de las liquidaciones y success" time="0.009">
+    </testcase>
+    <testcase classname="useLiquidation sendToPrepareSap captura mensaje de error del response" name="useLiquidation sendToPrepareSap captura mensaje de error del response" time="0.009">
+    </testcase>
+    <testcase classname="useLiquidation maneja errores inesperados y actualiza error" name="useLiquidation maneja errores inesperados y actualiza error" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationStateActionsOBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="10.592" tests="2">
+    <testcase classname="LiquidationStateActionsOBA cierra el modal al hacer click en &apos;Cerrar&apos;" name="LiquidationStateActionsOBA cierra el modal al hacer click en &apos;Cerrar&apos;" time="0.89">
+    </testcase>
+    <testcase classname="LiquidationStateActionsOBA no renderiza SvgCheck ni SvgError cuando no aplica" name="LiquidationStateActionsOBA no renderiza SvgCheck ni SvgError cuando no aplica" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationSupplies" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:45" time="1.063" tests="3">
+    <testcase classname="useLiquidationSupplies updates delivered energy with handleDeliveredChange" name="useLiquidationSupplies updates delivered energy with handleDeliveredChange" time="0.045">
+    </testcase>
+    <testcase classname="useLiquidationSupplies submits valid form and sets success" name="useLiquidationSupplies submits valid form and sets success" time="0.031">
+    </testcase>
+    <testcase classname="useLiquidationSupplies shows error when empty fields are present" name="useLiquidationSupplies shows error when empty fields are present" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationOBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:45" time="1.27" tests="3">
+    <testcase classname="useLiquidationOBA should fetch liquidations successfully" name="useLiquidationOBA should fetch liquidations successfully" time="0.02">
+    </testcase>
+    <testcase classname="useLiquidationOBA should handle errors when fetching liquidations" name="useLiquidationOBA should handle errors when fetching liquidations" time="0.112">
+    </testcase>
+    <testcase classname="useLiquidationOBA should handle errors during calculations" name="useLiquidationOBA should handle errors during calculations" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationOBAFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:34" time="11.616" tests="2">
+    <testcase classname="LiquidationOBAFilters calls onSubmit when the &apos;Buscar&apos; button is clicked" name="LiquidationOBAFilters calls onSubmit when the &apos;Buscar&apos; button is clicked" time="0.51">
+    </testcase>
+    <testcase classname="LiquidationOBAFilters calls resetFilters when the &apos;Limpiar&apos; button is clicked" name="LiquidationOBAFilters calls resetFilters when the &apos;Limpiar&apos; button is clicked" time="0.086">
+    </testcase>
+  </testsuite>
+  <testsuite name="useDailyConsumption" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:45" time="1.019" tests="2">
+    <testcase classname="useDailyConsumption inicializa correctamente y carga consumo diario" name="useDailyConsumption inicializa correctamente y carga consumo diario" time="0.039">
+    </testcase>
+    <testcase classname="useDailyConsumption maneja error sin romper el flujo" name="useDailyConsumption maneja error sin romper el flujo" time="0.044">
+    </testcase>
+  </testsuite>
+  <testsuite name="CustomTableOBA Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:44" time="3.264" tests="2">
+    <testcase classname="CustomTableOBA Component renders the table headers correctly" name="CustomTableOBA Component renders the table headers correctly" time="0.174">
+    </testcase>
+    <testcase classname="CustomTableOBA Component renders the specific header value correctly" name="CustomTableOBA Component renders the specific header value correctly" time="0.049">
+    </testcase>
+  </testsuite>
+  <testsuite name="CustomButton Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:46" time="1.347" tests="2">
+    <testcase classname="CustomButton Component renders correctly" name="CustomButton Component renders correctly" time="0.188">
+    </testcase>
+    <testcase classname="CustomButton Component renders correctly with onclick" name="CustomButton Component renders correctly with onclick" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="MessageAndExit Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:46" time="2.131" tests="5">
+    <testcase classname="MessageAndExit Component should render error message when errorMessage prop is provided" name="MessageAndExit Component should render error message when errorMessage prop is provided" time="0.099">
+    </testcase>
+    <testcase classname="MessageAndExit Component should render success message when successMessage prop is provided" name="MessageAndExit Component should render success message when successMessage prop is provided" time="0.039">
+    </testcase>
+    <testcase classname="MessageAndExit Component should render both error and success messages when both props are provided" name="MessageAndExit Component should render both error and success messages when both props are provided" time="0.015">
+    </testcase>
+    <testcase classname="MessageAndExit Component should call handleExit when the button is clicked" name="MessageAndExit Component should call handleExit when the button is clicked" time="0.355">
+    </testcase>
+    <testcase classname="MessageAndExit Component should render the CustomButton component" name="MessageAndExit Component should render the CustomButton component" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="HigheringcomeFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:45" time="2.96" tests="1">
+    <testcase classname="HigheringcomeFilters invoca onSubmit al hacer click en &quot;Buscar&quot;" name="HigheringcomeFilters invoca onSubmit al hacer click en &quot;Buscar&quot;" time="0.177">
+    </testcase>
+  </testsuite>
+  <testsuite name="Higheringcome Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:46" time="2.13" tests="3">
+    <testcase classname="Higheringcome Component renders list of liquidations" name="Higheringcome Component renders list of liquidations" time="0.06">
+    </testcase>
+    <testcase classname="Higheringcome Component clicking Export calls ExportExcel" name="Higheringcome Component clicking Export calls ExportExcel" time="0.055">
+    </testcase>
+    <testcase classname="Higheringcome Component displays error and success messages" name="Higheringcome Component displays error and success messages" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationCardHigheringDetails" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:46" time="2.791" tests="5">
+    <testcase classname="LiquidationCardHigheringDetails renderiza todos los headers correctamente" name="LiquidationCardHigheringDetails renderiza todos los headers correctamente" time="0.049">
+    </testcase>
+    <testcase classname="LiquidationCardHigheringDetails renderiza valores de liquidación correctamente" name="LiquidationCardHigheringDetails renderiza valores de liquidación correctamente" time="0.041">
+    </testcase>
+    <testcase classname="LiquidationCardHigheringDetails renderiza SvgCheck y SvgError cuando estado es &apos;LIQUIDATED&apos; y mensajeError existe" name="LiquidationCardHigheringDetails renderiza SvgCheck y SvgError cuando estado es &apos;LIQUIDATED&apos; y mensajeError existe" time="0.042">
+    </testcase>
+    <testcase classname="LiquidationCardHigheringDetails no renderiza SvgCheck si estado no es &apos;LIQUIDATED&apos;" name="LiquidationCardHigheringDetails no renderiza SvgCheck si estado no es &apos;LIQUIDATED&apos;" time="0.015">
+    </testcase>
+    <testcase classname="LiquidationCardHigheringDetails no renderiza SvgError si mensajeError es null" name="LiquidationCardHigheringDetails no renderiza SvgError si mensajeError es null" time="0.045">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:46" time="2.832" tests="1">
+    <testcase classname="useLiquidationFilters debe inicializar con los valores por defecto correctos" name="useLiquidationFilters debe inicializar con los valores por defecto correctos" time="0.02">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:48" time="1.793" tests="6">
+    <testcase classname=" renders CustomInput component correctly" name=" renders CustomInput component correctly" time="0.304">
+    </testcase>
+    <testcase classname=" renders CustomInput component with change value" name=" renders CustomInput component with change value" time="0.035">
+    </testcase>
+    <testcase classname="CustomInput Component renders CustomInput component correctly" name="CustomInput Component renders CustomInput component correctly" time="0.026">
+    </testcase>
+    <testcase classname="CustomInput Component calls onChange handler when input value changes" name="CustomInput Component calls onChange handler when input value changes" time="0.092">
+    </testcase>
+    <testcase classname="CustomInput Component renders disabled input when disabled prop is true" name="CustomInput Component renders disabled input when disabled prop is true" time="0.026">
+    </testcase>
+    <testcase classname="CustomInput Component renders invalid input when required and value is empty" name="CustomInput Component renders invalid input when required and value is empty" time="0.031">
+    </testcase>
+  </testsuite>
+  <testsuite name="RecoveryGdM" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:48" time="1.838" tests="4">
+    <testcase classname="RecoveryGdM renderiza correctamente los elementos básicos" name="RecoveryGdM renderiza correctamente los elementos básicos" time="0.074">
+    </testcase>
+    <testcase classname="RecoveryGdM permite escribir en el input de recobro" name="RecoveryGdM permite escribir en el input de recobro" time="0.315">
+    </testcase>
+    <testcase classname="RecoveryGdM ejecuta búsqueda al hacer clic en &apos;Buscar&apos;" name="RecoveryGdM ejecuta búsqueda al hacer clic en &apos;Buscar&apos;" time="0.028">
+    </testcase>
+    <testcase classname="RecoveryGdM ejecuta exportación al hacer clic en &apos;Exportar&apos;" name="RecoveryGdM ejecuta exportación al hacer clic en &apos;Exportar&apos;" time="0.066">
+    </testcase>
+  </testsuite>
+  <testsuite name="CustomTable" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="1.479" tests="3">
+    <testcase classname="CustomTable renders loading component when loading is true" name="CustomTable renders loading component when loading is true" time="0.025">
+    </testcase>
+    <testcase classname="CustomTable renders table with data when items exist" name="CustomTable renders table with data when items exist" time="0.064">
+    </testcase>
+    <testcase classname="CustomTable renders Pagination component" name="CustomTable renders Pagination component" time="0.02">
+    </testcase>
+  </testsuite>
+  <testsuite name="Dropdown Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:48" time="1.978" tests="6">
+    <testcase classname="Dropdown Component renders correctly with default props" name="Dropdown Component renders correctly with default props" time="0.063">
+    </testcase>
+    <testcase classname="Dropdown Component passes all SelectProps correctly to the underlying Select component" name="Dropdown Component passes all SelectProps correctly to the underlying Select component" time="0.014">
+    </testcase>
+    <testcase classname="Dropdown Component shows required asterisk when required is true" name="Dropdown Component shows required asterisk when required is true" time="0.057">
+    </testcase>
+    <testcase classname="Dropdown Component passes options and value correctly to Select component" name="Dropdown Component passes options and value correctly to Select component" time="0.019">
+    </testcase>
+    <testcase classname="Dropdown Component handles multi-select onChange event correctly" name="Dropdown Component handles multi-select onChange event correctly" time="0.248">
+    </testcase>
+    <testcase classname="Dropdown Component passes isMulti prop correctly" name="Dropdown Component passes isMulti prop correctly" time="0.025">
+    </testcase>
+  </testsuite>
+  <testsuite name="MasterApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="0.754" tests="6">
+    <testcase classname="MasterApi getClients devuelve clientes correctamente" name="MasterApi getClients devuelve clientes correctamente" time="0.004">
+    </testcase>
+    <testcase classname="MasterApi getConsecutivesAndSupplys devuelve consecutivos y fuentes" name="MasterApi getConsecutivesAndSupplys devuelve consecutivos y fuentes" time="0.003">
+    </testcase>
+    <testcase classname="MasterApi getConsecutivesByMonthYear retorna consecutivos correctamente" name="MasterApi getConsecutivesByMonthYear retorna consecutivos correctamente" time="0.005">
+    </testcase>
+    <testcase classname="MasterApi getConsecutivesByMonthYearPBA retorna correctamente" name="MasterApi getConsecutivesByMonthYearPBA retorna correctamente" time="0.005">
+    </testcase>
+    <testcase classname="MasterApi getParticipationByDate con date nulo debe usar fecha actual" name="MasterApi getParticipationByDate con date nulo debe usar fecha actual" time="0.017">
+    </testcase>
+    <testcase classname="MasterApi getParticipationByDate debe retornar arreglo vacío si respuesta nula" name="MasterApi getParticipationByDate debe retornar arreglo vacío si respuesta nula" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="PointsCard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="1.578" tests="1">
+    <testcase classname="PointsCard Component renders the points correctly" name="PointsCard Component renders the points correctly" time="0.095">
+    </testcase>
+  </testsuite>
+  <testsuite name="TabNavigation" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="1.334" tests="2">
+    <testcase classname="TabNavigation renders the correct number of TabButton components" name="TabNavigation renders the correct number of TabButton components" time="0.042">
+    </testcase>
+    <testcase classname="TabNavigation passes the correct props to each TabButton" name="TabNavigation passes the correct props to each TabButton" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="1.67" tests="3">
+    <testcase classname=" should render the button with the correct variant" name=" should render the button with the correct variant" time="0.173">
+    </testcase>
+    <testcase classname=" should call onClick when clicked" name=" should call onClick when clicked" time="0.036">
+    </testcase>
+    <testcase classname=" should be disabled when the disabled prop is true" name=" should be disabled when the disabled prop is true" time="0.034">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationPBAActionButtons" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:49" time="1.523" tests="4">
+    <testcase classname="LiquidationPBAActionButtons renders both buttons and icons" name="LiquidationPBAActionButtons renders both buttons and icons" time="0.05">
+    </testcase>
+    <testcase classname="LiquidationPBAActionButtons calls onExport when Descargar button is clicked" name="LiquidationPBAActionButtons calls onExport when Descargar button is clicked" time="0.018">
+    </testcase>
+    <testcase classname="LiquidationPBAActionButtons calls onAction when Calcular button is clicked" name="LiquidationPBAActionButtons calls onAction when Calcular button is clicked" time="0.015">
+    </testcase>
+    <testcase classname="LiquidationPBAActionButtons disables buttons based on props" name="LiquidationPBAActionButtons disables buttons based on props" time="0.018">
+    </testcase>
+  </testsuite>
+  <testsuite name="Checkbox Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:50" time="0.896" tests="2">
+    <testcase classname="Checkbox Component renders correctly" name="Checkbox Component renders correctly" time="0.136">
+    </testcase>
+    <testcase classname="Checkbox Component click" name="Checkbox Component click" time="0.033">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationHigheringcome" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:50" time="1.037" tests="7">
+    <testcase classname="useLiquidationHigheringcome debe inicializar con los estados correctos" name="useLiquidationHigheringcome debe inicializar con los estados correctos" time="0.015">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe manejar getLiquidation exitoso" name="useLiquidationHigheringcome debe manejar getLiquidation exitoso" time="0.008">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe manejar error en getLiquidation" name="useLiquidationHigheringcome debe manejar error en getLiquidation" time="0.01">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe manejar updateLiquidation exitoso" name="useLiquidationHigheringcome debe manejar updateLiquidation exitoso" time="0.011">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe manejar error en updateLiquidation" name="useLiquidationHigheringcome debe manejar error en updateLiquidation" time="0.011">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe manejar el estado de loading correctamente" name="useLiquidationHigheringcome debe manejar el estado de loading correctamente" time="0.193">
+    </testcase>
+    <testcase classname="useLiquidationHigheringcome debe llamar a la API con los filtros correctos" name="useLiquidationHigheringcome debe llamar a la API con los filtros correctos" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationFactorXHeader" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:50" time="1.222" tests="2">
+    <testcase classname="LiquidationFactorXHeader renders the headers correctly" name="LiquidationFactorXHeader renders the headers correctly" time="0.029">
+    </testcase>
+    <testcase classname="LiquidationFactorXHeader renders the liquidation data correctly" name="LiquidationFactorXHeader renders the liquidation data correctly" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="useParticipationPartner" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="0.828" tests="1">
+    <testcase classname="useParticipationPartner inicializa con arreglo vacío y carga participación correctamente" name="useParticipationPartner inicializa con arreglo vacío y carga participación correctamente" time="0.034">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationCarbonTax" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="1.289" tests="4">
+    <testcase classname="useLiquidationCarbonTax debe manejar el estado de carga y éxito en getLiquidation" name="useLiquidationCarbonTax debe manejar el estado de carga y éxito en getLiquidation" time="0.084">
+    </testcase>
+    <testcase classname="useLiquidationCarbonTax debe manejar errores en getLiquidation" name="useLiquidationCarbonTax debe manejar errores en getLiquidation" time="0.089">
+    </testcase>
+    <testcase classname="useLiquidationCarbonTax debe manejar actualización de liquidación exitosa" name="useLiquidationCarbonTax debe manejar actualización de liquidación exitosa" time="0.088">
+    </testcase>
+    <testcase classname="useLiquidationCarbonTax debe manejar errores en updateLiquidation" name="useLiquidationCarbonTax debe manejar errores en updateLiquidation" time="0.096">
+    </testcase>
+  </testsuite>
+  <testsuite name="CarbonTaxManager" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="0.907" tests="3">
+    <testcase classname="CarbonTaxManager renderiza correctamente los elementos principales" name="CarbonTaxManager renderiza correctamente los elementos principales" time="0.044">
+    </testcase>
+    <testcase classname=" muestra el componente de carga cuando loading es verdadero" name=" muestra el componente de carga cuando loading es verdadero" time="0.01">
+    </testcase>
+    <testcase classname=" no muestra el componente de carga cuando loading es falso" name=" no muestra el componente de carga cuando loading es falso" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="useHigheringcomeFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="0.77" tests="6">
+    <testcase classname="useHigheringcomeFilters debe inicializar con los valores por defecto" name="useHigheringcomeFilters debe inicializar con los valores por defecto" time="0.02">
+    </testcase>
+    <testcase classname="useHigheringcomeFilters debe actualizar mes y año correctamente" name="useHigheringcomeFilters debe actualizar mes y año correctamente" time="0.009">
+    </testcase>
+    <testcase classname="useHigheringcomeFilters debe llamar onChangeSelects con los valores correctos al actualizar" name="useHigheringcomeFilters debe llamar onChangeSelects con los valores correctos al actualizar" time="0.006">
+    </testcase>
+    <testcase classname="useHigheringcomeFilters debe resetear los filtros a los valores por defecto" name="useHigheringcomeFilters debe resetear los filtros a los valores por defecto" time="0.007">
+    </testcase>
+    <testcase classname="useHigheringcomeFilters debe actualizar los valores por defecto si cambian" name="useHigheringcomeFilters debe actualizar los valores por defecto si cambian" time="0.016">
+    </testcase>
+    <testcase classname="useHigheringcomeFilters debe mantener la referencia estable de resetFilters con dependencias constantes" name="useHigheringcomeFilters debe mantener la referencia estable de resetFilters con dependencias constantes" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationDataCardOBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="1.636" tests="1">
+    <testcase classname="LiquidationDataCardOBA renders NoData when liquidations array is empty" name="LiquidationDataCardOBA renders NoData when liquidations array is empty" time="0.018">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgIconModal Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="1.233" tests="3">
+    <testcase classname="SvgIconModal Component renders the SVG element" name="SvgIconModal Component renders the SVG element" time="0.076">
+    </testcase>
+    <testcase classname="SvgIconModal Component applies disabled styles when disabled prop is true" name="SvgIconModal Component applies disabled styles when disabled prop is true" time="0.051">
+    </testcase>
+    <testcase classname="SvgIconModal Component calls onClick handler when clicked and not disabled" name="SvgIconModal Component calls onClick handler when clicked and not disabled" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgSearch Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="0.912" tests="1">
+    <testcase classname="SvgSearch Component renders SvgSearch component correctly" name="SvgSearch Component renders SvgSearch component correctly" time="0.02">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgPencil Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:51" time="1.295" tests="5">
+    <testcase classname="SvgPencil Component renders without crashing" name="SvgPencil Component renders without crashing" time="0.024">
+    </testcase>
+    <testcase classname="SvgPencil Component applies default size when size prop is not provided" name="SvgPencil Component applies default size when size prop is not provided" time="0.009">
+    </testcase>
+    <testcase classname="SvgPencil Component applies custom size when size prop is provided" name="SvgPencil Component applies custom size when size prop is provided" time="0.009">
+    </testcase>
+    <testcase classname="SvgPencil Component applies custom color when color prop is provided" name="SvgPencil Component applies custom color when color prop is provided" time="0.006">
+    </testcase>
+    <testcase classname="SvgPencil Component does not apply color attribute when color prop is not provided" name="SvgPencil Component does not apply color attribute when color prop is not provided" time="0.036">
+    </testcase>
+  </testsuite>
+  <testsuite name="useFactorXLiquidation" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="1.242" tests="5">
+    <testcase classname="useFactorXLiquidation debe cargar factores correctamente" name="useFactorXLiquidation debe cargar factores correctamente" time="0.026">
+    </testcase>
+    <testcase classname="useFactorXLiquidation debe manejar errores al cargar factores" name="useFactorXLiquidation debe manejar errores al cargar factores" time="0.027">
+    </testcase>
+    <testcase classname="useFactorXLiquidation debe liquidar factores correctamente" name="useFactorXLiquidation debe liquidar factores correctamente" time="0.022">
+    </testcase>
+    <testcase classname="useFactorXLiquidation debe manejar errores al liquidar" name="useFactorXLiquidation debe manejar errores al liquidar" time="0.015">
+    </testcase>
+    <testcase classname="useFactorXLiquidation debe actualizar el estado de factores" name="useFactorXLiquidation debe actualizar el estado de factores" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgGoContract Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="1.243" tests="2">
+    <testcase classname="SvgGoContract Component renders the SVG element" name="SvgGoContract Component renders the SVG element" time="0.023">
+    </testcase>
+    <testcase classname="SvgGoContract Component renders the tooltips" name="SvgGoContract Component renders the tooltips" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgContract Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="0.839" tests="2">
+    <testcase classname="SvgContract Component renders the SVG element" name="SvgContract Component renders the SVG element" time="0.033">
+    </testcase>
+    <testcase classname="SvgContract Component renders the tooltips" name="SvgContract Component renders the tooltips" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgCalendar Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="0.914" tests="1">
+    <testcase classname="SvgCalendar Component renders the SVG element" name="SvgCalendar Component renders the SVG element" time="0.061">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationCarbonFilters" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:52" time="1.053" tests="6">
+    <testcase classname="useLiquidationCarbonFilters debe inicializar con valores por defecto" name="useLiquidationCarbonFilters debe inicializar con valores por defecto" time="0.034">
+    </testcase>
+    <testcase classname="useLiquidationCarbonFilters debe cargar consecutivos al montar" name="useLiquidationCarbonFilters debe cargar consecutivos al montar" time="0.071">
+    </testcase>
+    <testcase classname="useLiquidationCarbonFilters debe manejar cambio de mes/año y resetear consecutivos" name="useLiquidationCarbonFilters debe manejar cambio de mes/año y resetear consecutivos" time="0.027">
+    </testcase>
+    <testcase classname="useLiquidationCarbonFilters debe actualizar consecutivos seleccionados" name="useLiquidationCarbonFilters debe actualizar consecutivos seleccionados" time="0.03">
+    </testcase>
+    <testcase classname="useLiquidationCarbonFilters debe resetear filtros correctamente" name="useLiquidationCarbonFilters debe resetear filtros correctamente" time="0.019">
+    </testcase>
+    <testcase classname="useLiquidationCarbonFilters debe actualizar consecutivos al cambiar mes/año" name="useLiquidationCarbonFilters debe actualizar consecutivos al cambiar mes/año" time="0.018">
+    </testcase>
+  </testsuite>
+  <testsuite name="liquidationsCarbonApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="0.66" tests="3">
+    <testcase classname="liquidationsCarbonApi getLiquidation devuelve liquidaciones correctamente mapeadas" name="liquidationsCarbonApi getLiquidation devuelve liquidaciones correctamente mapeadas" time="0.007">
+    </testcase>
+    <testcase classname="liquidationsCarbonApi getLiquidation retorna null si listLiquidationTax es null" name="liquidationsCarbonApi getLiquidation retorna null si listLiquidationTax es null" time="0.006">
+    </testcase>
+    <testcase classname="liquidationsCarbonApi updateLiquidation realiza POST correctamente" name="liquidationsCarbonApi updateLiquidation realiza POST correctamente" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgCalendar Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="0.908" tests="1">
+    <testcase classname="SvgCalendar Component renders the SVG element" name="SvgCalendar Component renders the SVG element" time="0.068">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgDownload Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="0.995" tests="1">
+    <testcase classname="SvgDownload Component renders the SVG element" name="SvgDownload Component renders the SVG element" time="0.027">
+    </testcase>
+  </testsuite>
+  <testsuite name="FactorXManager" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="1.144" tests="6">
+    <testcase classname="FactorXManager renderiza correctamente los elementos principales" name="FactorXManager renderiza correctamente los elementos principales" time="0.059">
+    </testcase>
+    <testcase classname="FactorXManager llama a setSearch cuando se cambian los filtros" name="FactorXManager llama a setSearch cuando se cambian los filtros" time="0.015">
+    </testcase>
+    <testcase classname="FactorXManager llama a getLiquidation cuando se hace clic en buscar" name="FactorXManager llama a getLiquidation cuando se hace clic en buscar" time="0.009">
+    </testcase>
+    <testcase classname="FactorXManager llama a liquidateFactorX cuando se hace clic en el botón Liquidar" name="FactorXManager llama a liquidateFactorX cuando se hace clic en el botón Liquidar" time="0.021">
+    </testcase>
+    <testcase classname="FactorXManager muestra el componente de carga cuando loading es true" name="FactorXManager muestra el componente de carga cuando loading es true" time="0.115">
+    </testcase>
+    <testcase classname="FactorXManager muestra mensajes de error y éxito específicos" name="FactorXManager muestra mensajes de error y éxito específicos" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="factorXApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:54" time="1.202" tests="3">
+    <testcase classname="factorXApi getFactorXLiquidation devuelve datos correctamente" name="factorXApi getFactorXLiquidation devuelve datos correctamente" time="0.042">
+    </testcase>
+    <testcase classname="factorXApi getFactorXLiquidation retorna array vacío si no hay datos" name="factorXApi getFactorXLiquidation retorna array vacío si no hay datos" time="0.003">
+    </testcase>
+    <testcase classname="factorXApi liquidateFactorX devuelve false si respuesta nula" name="factorXApi liquidateFactorX devuelve false si respuesta nula" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidationSupplies" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:53" time="1.077" tests="6">
+    <testcase classname="useLiquidationSupplies debe inicializar con los estados correctos" name="useLiquidationSupplies debe inicializar con los estados correctos" time="0.012">
+    </testcase>
+    <testcase classname="useLiquidationSupplies debe manejar un caso exitoso en fetchLiquidationSupplies" name="useLiquidationSupplies debe manejar un caso exitoso en fetchLiquidationSupplies" time="0.009">
+    </testcase>
+    <testcase classname="useLiquidationSupplies debe manejar un caso de error en fetchLiquidationSupplies" name="useLiquidationSupplies debe manejar un caso de error en fetchLiquidationSupplies" time="0.09">
+    </testcase>
+    <testcase classname="useLiquidationSupplies debe validar correctamente los valores entregados" name="useLiquidationSupplies debe validar correctamente los valores entregados" time="0.008">
+    </testcase>
+    <testcase classname="useLiquidationSupplies debe manejar correctamente los cambios en los valores entregados" name="useLiquidationSupplies debe manejar correctamente los cambios en los valores entregados" time="0.04">
+    </testcase>
+    <testcase classname="useLiquidationSupplies debe manejar correctamente los cambios cuando liquidationSupplies es null" name="useLiquidationSupplies debe manejar correctamente los cambios cuando liquidationSupplies es null" time="0.018">
+    </testcase>
+  </testsuite>
+  <testsuite name="royaltiesApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:54" time="1.047" tests="6">
+    <testcase classname="royaltiesApi getRoyalitiesANHLiquidation retorna los datos mapeados correctamente" name="royaltiesApi getRoyalitiesANHLiquidation retorna los datos mapeados correctamente" time="0.005">
+    </testcase>
+    <testcase classname="royaltiesApi UpdateLiquidationsANH debe formatear valores numéricos y llamar correctamente el endpoint" name="royaltiesApi UpdateLiquidationsANH debe formatear valores numéricos y llamar correctamente el endpoint" time="0.102">
+    </testcase>
+    <testcase classname="royaltiesApi UpdatePriceANH debe enviar el payload correctamente" name="royaltiesApi UpdatePriceANH debe enviar el payload correctamente" time="0.005">
+    </testcase>
+    <testcase classname="royaltiesApi liquidateANH debe enviar el payload correctamente" name="royaltiesApi liquidateANH debe enviar el payload correctamente" time="0.003">
+    </testcase>
+    <testcase classname="royaltiesApi getAllGasSupplySource debe mapear correctamente las opciones" name="royaltiesApi getAllGasSupplySource debe mapear correctamente las opciones" time="0.002">
+    </testcase>
+    <testcase classname="royaltiesApi getRoyalitiesANHPrices debe devolver arreglo sin transformar" name="royaltiesApi getRoyalitiesANHPrices debe devolver arreglo sin transformar" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgCheck Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:54" time="1.257" tests="1">
+    <testcase classname="SvgCheck Component renders the SVG element" name="SvgCheck Component renders the SVG element" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="SvgError Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:54" time="1.576" tests="2">
+    <testcase classname="SvgError Component renders the SVG element" name="SvgError Component renders the SVG element" time="0.185">
+    </testcase>
+    <testcase classname="SvgError Component does not render when message is empty" name="SvgError Component does not render when message is empty" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationOBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.75" tests="5">
+    <testcase classname="LiquidationOBA getDeliveryPoints retorna datos correctamente" name="LiquidationOBA getDeliveryPoints retorna datos correctamente" time="0.006">
+    </testcase>
+    <testcase classname="LiquidationOBA getDetailOBA retorna datos correctamente" name="LiquidationOBA getDetailOBA retorna datos correctamente" time="0.005">
+    </testcase>
+    <testcase classname="LiquidationOBA getListOBA retorna datos correctamente" name="LiquidationOBA getListOBA retorna datos correctamente" time="0.003">
+    </testcase>
+    <testcase classname="LiquidationOBA makeCalculations retirna datos correctamente" name="LiquidationOBA makeCalculations retirna datos correctamente" time="0.002">
+    </testcase>
+    <testcase classname="LiquidationOBA makeLiquidation retorna datos correctamente" name="LiquidationOBA makeLiquidation retorna datos correctamente" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLiquidation" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.933" tests="2">
+    <testcase classname="useLiquidation debe inicializar con estados correctos" name="useLiquidation debe inicializar con estados correctos" time="0.019">
+    </testcase>
+    <testcase classname="useLiquidation debe manejar un caso de error en sendToPrepareSap" name="useLiquidation debe manejar un caso de error en sendToPrepareSap" time="0.068">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationsApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.555" tests="5">
+    <testcase classname="LiquidationsApi getLiquidation devuelve datos correctamente mapeados" name="LiquidationsApi getLiquidation devuelve datos correctamente mapeados" time="0.007">
+    </testcase>
+    <testcase classname="LiquidationsApi getSuppliesByContract retorna supplies con total acumulado" name="LiquidationsApi getSuppliesByContract retorna supplies con total acumulado" time="0.002">
+    </testcase>
+    <testcase classname="LiquidationsApi updateLiquidationSupplies retorna true si éxito" name="LiquidationsApi updateLiquidationSupplies retorna true si éxito" time="0.005">
+    </testcase>
+    <testcase classname="LiquidationsApi updateLiquidation retorna resultado esperado" name="LiquidationsApi updateLiquidation retorna resultado esperado" time="0.001">
+    </testcase>
+    <testcase classname="LiquidationsApi sendToPrepareSap realiza post correctamente" name="LiquidationsApi sendToPrepareSap realiza post correctamente" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="higheringcomeApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.56" tests="3">
+    <testcase classname="higheringcomeApi getLiquidation devuelve objeto mapeado correctamente" name="higheringcomeApi getLiquidation devuelve objeto mapeado correctamente" time="0.019">
+    </testcase>
+    <testcase classname="higheringcomeApi getLiquidation retorna null si no hay liquidaciones" name="higheringcomeApi getLiquidation retorna null si no hay liquidaciones" time="0.002">
+    </testcase>
+    <testcase classname="higheringcomeApi buildLiquidationPayload construye payload correctamente" name="higheringcomeApi buildLiquidationPayload construye payload correctamente" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="useValidationSearch" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.877" tests="4">
+    <testcase classname="useValidationSearch debe inicializar con valores por defecto" name="useValidationSearch debe inicializar con valores por defecto" time="0.013">
+    </testcase>
+    <testcase classname="useValidationSearch debe actualizar el estado de búsqueda correctamente" name="useValidationSearch debe actualizar el estado de búsqueda correctamente" time="0.004">
+    </testcase>
+    <testcase classname="useValidationSearch debe manejar cambios parciales en los filtros" name="useValidationSearch debe manejar cambios parciales en los filtros" time="0.005">
+    </testcase>
+    <testcase classname="useValidationSearch debe usar nuevos valores por defecto cuando se actualizan" name="useValidationSearch debe usar nuevos valores por defecto cuando se actualizan" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Loading Component" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.621" tests="2">
+    <testcase classname="Loading Component should render null when isLoading is false" name="Loading Component should render null when isLoading is false" time="0.008">
+    </testcase>
+    <testcase classname="Loading Component should render the loading spinner when isLoading is true" name="Loading Component should render the loading spinner when isLoading is true" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationCardHighering" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:55" time="0.848" tests="4">
+    <testcase classname="LiquidationCardHighering renderiza &lt;NoData /&gt; si no hay liquidaciones" name="LiquidationCardHighering renderiza &lt;NoData /&gt; si no hay liquidaciones" time="0.012">
+    </testcase>
+    <testcase classname="LiquidationCardHighering renderiza un &lt;CustomAccordion&gt; por cada liquidación" name="LiquidationCardHighering renderiza un &lt;CustomAccordion&gt; por cada liquidación" time="0.012">
+    </testcase>
+    <testcase classname="LiquidationCardHighering añade clase &apos;has-error&apos; si hay mensajeError" name="LiquidationCardHighering añade clase &apos;has-error&apos; si hay mensajeError" time="0.008">
+    </testcase>
+    <testcase classname="LiquidationCardHighering no añade clase &apos;has-error&apos; si no hay mensajeError" name="LiquidationCardHighering no añade clase &apos;has-error&apos; si no hay mensajeError" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="LiquidationPBA" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:56" time="0.454" tests="8">
+    <testcase classname="LiquidationPBA getMainCalculations retorna datos correctamente" name="LiquidationPBA getMainCalculations retorna datos correctamente" time="0.003">
+    </testcase>
+    <testcase classname="LiquidationPBA makeCalculations realiza cálculo y retorna response.data" name="LiquidationPBA makeCalculations realiza cálculo y retorna response.data" time="0.001">
+    </testcase>
+    <testcase classname="LiquidationPBA getDailyConsumption retorna estructura esperada" name="LiquidationPBA getDailyConsumption retorna estructura esperada" time="0.003">
+    </testcase>
+    <testcase classname="LiquidationPBA makeLiquidation realiza POST correctamente" name="LiquidationPBA makeLiquidation realiza POST correctamente" time="0.001">
+    </testcase>
+    <testcase classname="LiquidationPBA getInfoLastestLiquidation retorna los datos esperados" name="LiquidationPBA getInfoLastestLiquidation retorna los datos esperados" time="0.002">
+    </testcase>
+    <testcase classname="LiquidationPBA getAgreementsPBA retorna string esperado" name="LiquidationPBA getAgreementsPBA retorna string esperado" time="0.001">
+    </testcase>
+    <testcase classname="LiquidationPBA getDataExportPBA retorna datos en éxito" name="LiquidationPBA getDataExportPBA retorna datos en éxito" time="0.001">
+    </testcase>
+    <testcase classname="LiquidationPBA getDataExportPBA retorna mensaje de error si falla" name="LiquidationPBA getDataExportPBA retorna mensaje de error si falla" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="PointsApi" errors="0" failures="0" skipped="0" timestamp="2025-05-13T13:38:56" time="0.365" tests="5">
+    <testcase classname="PointsApi getPoints debe retornar un arreglo de puntos transformados" name="PointsApi getPoints debe retornar un arreglo de puntos transformados" time="0.002">
+    </testcase>
+    <testcase classname="PointsApi getPointById debe retornar un arreglo desde .value" name="PointsApi getPointById debe retornar un arreglo desde .value" time="0.002">
+    </testcase>
+    <testcase classname="PointsApi updatePoint debe enviar datos transformados correctamente y retornar true" name="PointsApi updatePoint debe enviar datos transformados correctamente y retornar true" time="0.002">
+    </testcase>
+    <testcase classname="PointsApi updatePoint debe retornar true si status es 204" name="PointsApi updatePoint debe retornar true si status es 204" time="0">
+    </testcase>
+    <testcase classname="PointsApi updatePoint debe retornar false si status es diferente" name="PointsApi updatePoint debe retornar false si status es diferente" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,31 @@
+export interface PendingForSendToSapDto {
+    id: number,
+    idLiquidationType: number;
+    nameLiquidationType: string;
+    idLiquidation: number;
+    nameLiquidation: string;
+    documentClass: string;
+    invoiceReferenceNumber: string;
+    associatedContract: string;
+    clientReferenceNumber: string;
+    referenceDocumentNumber: string;
+    companyNit: string;
+    creationDate: string;
+    documentCurrency: string;
+    exchangeRate: string;
+    exchangeRateDate: string;
+    remarks: string;
+    orderDate: string;
+    materialCode: string;
+    quantity: string;
+    unitOfMeasure: string;
+    sapOrder: string;
+    conditionClass: string;
+    rate: string;
+    currency: string;
+    calorificPower: string;
+    orderNumber: string;
+    errorMessage: string;
+    state: string;
+    canSendToSap: boolean;
+}

@@ -1,0 +1,132 @@
+.liquidation-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions-row {
+    display: flex;
+    gap: 10px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #333;
+}
+
+.icon-button {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.icon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dashed-line {
+    width: 100%;
+    border: none;
+    border-top: 2px dashed gray;
+    margin: 8px 0;
+}
+
+.custom-status {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.status-confirmada {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.text-with-values {
+    margin: 6px;
+    color: gray;
+    font-size: 16px;
+}
+
+.primary:hover .button-icon {
+    fill: #2b388f;
+}
+
+.custom-dropdown {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .custom-dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .custom-dropdown-toggle {
+    background-color: white;
+    border: none;
+    position: relative;
+    height: 100%;
+  }
+  
+  .custom-dropdown-separator {
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    left: 0;
+    top: 25%;
+    background-color: #ccc;
+  }
+  
+  .custom-accordion {
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .has-error {
+    position: relative;
+    border: 1px solid rgba(255, 69, 58, 0.8);
+    box-shadow: 0 0 15px rgba(255, 69, 58, 0.4);
+  }
+  
+  .scrollable-container {
+    overflow-x: auto;
+  }
+  
+  th.min-width-120 {
+    min-width: 120px;
+    text-align: center;
+  }
+  

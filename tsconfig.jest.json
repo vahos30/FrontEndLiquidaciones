@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {    
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "moduleDetection": "force",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "importHelpers": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "types": ["@types/jest", "jest", "node"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,  
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@components/*": ["src/core/components/*"],
+      "@/*": ["src/*"]
+    }
+  }, 
+  "include": ["src", "__test__/**/*", "setupTests.ts"] 
+}

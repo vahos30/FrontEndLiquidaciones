@@ -1,0 +1,15 @@
+.custom-nav .nav-link {
+    color: #6c757d;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.custom-nav .nav-link.active {
+    color: #2B388F !important;
+    font-weight: bold;
+}
+
+.tab-content {
+    border: none !important;
+    padding-top: 10px;
+}

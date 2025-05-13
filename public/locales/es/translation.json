@@ -1,0 +1,47 @@
+{
+  "Buttons": {
+    "Save": "Guardar",
+    "Cancel": "Cancelar",
+    "Delete": "Eliminar",
+    "Edit": "Editar",
+    "Add": "Agregar nominación",
+    "Export": "Descargar informe",
+    "Confirm": "Confirmar liquidaciones",
+    "Saving": "Guardando...",
+    "Review": "Revisar liquidaciones",
+    "Refresh": "Refrescar"
+  },
+  "Validation": {
+    "ValidateNumber": "Solo se permiten números.",
+    "ValidSpecialCharacters": "No se permiten caracteres especiales."
+  },
+  "Constants": {
+    "TitleNominationsClient": "Nominaciones 'cliente'",
+    "TitleNominationsCommercial": "Nominaciones",
+    "TitleDeleteConfirm": "Eliminar línea de nominación",
+    "MessageDeleteConfirm": "¿Está seguro que desea eliminar esta línea de nominación?",
+    "MessageSaveSuccess": "Guardado justo ahora!.",
+    "ReportExcelClients": "Nominaciones Clientes",
+    "ReportExcelCommercial": "Nominaciones Gestión Comercial",
+    "TitleCancelConfirm": "Salir",
+    "MessageCancelConfirm": "Recuerde que si tiene líneas de nominación sin guardar, se perderán y deberá volver a empezar. ¿Desea salir sin guardar?",
+    "TextButtonDeleteConfirm": "No, conservar",
+    "TextButtonDelete": "Sí, eliminar",
+    "TextButtonCancelConfirm": "Sí, cancelar y salir",
+    "TextButtonCancel": "No, continuar"
+  },
+  "HeadClientsColumns": {
+    "Client": "Cliente",
+    "ConsecutiveContract": "Consecutivo de contrato",
+    "SupplySource": "Fuente de suministro",
+    "DeliveryPoint": "Punto de entrega",
+    "DemandToAttend": "Demanda a atender",
+    "ConsumptionSector": "Sector de consumo",
+    "FinalDestination": "Destino final",
+    "NominatedEnergy": "Energía Nominada",
+    "AdjustedEnergy": "Energía Ajustada",
+    "ConfirmedEnergy": "Energía Confirmada",
+    "Status": "Estado",
+    "Actions": "Acciones"
+  }
+}
